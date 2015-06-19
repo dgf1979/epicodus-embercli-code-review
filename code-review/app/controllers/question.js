@@ -9,11 +9,13 @@ export default Ember.ObjectController.extend({
         author: this.get('answerAuthor'),
         date: (new Date()).toLocaleTimeString("en-us") + " on " + (new Date()).toLocaleDateString("en-us")
       });
-      newAnswer.save();
 
       var question = this.model;
-      question.get('answers').pushObject(newAnswer);
-      question.save();
+
+      newAnswer.save().then( function() {
+        question.get('answers').pushObject(newAnswer);
+        question.save();
+      });
 
       this.set('answeringQuestion', false);
     },
