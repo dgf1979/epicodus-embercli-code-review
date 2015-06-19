@@ -1,6 +1,6 @@
 <div class="row well">
   <h6>
-    <span class="italic">Posted at:</span> {{date}}
+    <span class="italic">Posted </span> {{from-now date}}
       by: <span class="italic">{{author}}</span>
   </h6>
   <br />
@@ -54,7 +54,7 @@
             {{answer.answer}}
           </td>
           <td>
-            {{answer.date}}
+            {{from-now answer.date}} ago
           </td>
           <td>
             <button class="btn btn-danger" {{action 'deleteAnswer' answer}}>Delete</button>

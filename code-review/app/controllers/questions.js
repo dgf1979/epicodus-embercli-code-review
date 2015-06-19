@@ -8,7 +8,7 @@ export default Ember.ArrayController.extend({
         question: this.get('question'),
         author: this.get('author'),
         description: this.get('description'),
-        date: (new Date()).toLocaleTimeString("en-us") + " on " + (new Date()).toLocaleDateString("en-us")
+        date: (new Date())
       });
       newQuestion.save();
       this.set('askingQuestion', false);

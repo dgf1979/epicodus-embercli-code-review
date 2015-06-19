@@ -51,7 +51,7 @@
               {{#link-to 'question' question}}{{question.question}}{{/link-to}}
             </td>
             <td>
-              {{question.date}}
+              {{from-now question.date}} ago
             </td>
             <td>
               {{#link-to 'edit-question' question}}<span class="btn btn-danger">Edit</span>{{/link-to}}

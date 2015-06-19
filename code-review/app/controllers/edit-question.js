@@ -11,7 +11,7 @@ export default Ember.ObjectController.extend({
       if(confirm('Are you sure?')) {
         this.get('model').destroyRecord();
         this.transitionToRoute('questions');
-      };
+      }
     }
   }
 });

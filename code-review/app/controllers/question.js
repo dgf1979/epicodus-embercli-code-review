@@ -7,7 +7,7 @@ export default Ember.ObjectController.extend({
       var newAnswer = this.store.createRecord('answer', {
         answer: this.get('answer'),
         author: this.get('answerAuthor'),
-        date: (new Date()).toLocaleTimeString("en-us") + " on " + (new Date()).toLocaleDateString("en-us")
+        date: (new Date())
       });
 
       var question = this.model;
@@ -27,7 +27,7 @@ export default Ember.ObjectController.extend({
         answer.destroyRecord();
         var question = this.model;
         question.save();
-      };
+      }
     }
   }
 });
