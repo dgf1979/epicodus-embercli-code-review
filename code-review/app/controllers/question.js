@@ -17,6 +17,11 @@ export default Ember.Controller.extend({
         question.save();
       });
 
+      this.setProperties({
+        answer: '',
+        answerAuthor: ''
+      });
+
       this.set('answeringQuestion', false);
     },
     showAnswerForm: function() {

@@ -11,6 +11,13 @@ export default Ember.ArrayController.extend({
         date: (new Date())
       });
       newQuestion.save();
+
+      this.setProperties({
+        question: '',
+        author: '',
+        description: ''
+      });
+
       this.set('askingQuestion', false);
     },
     showQuestionForm: function() {
