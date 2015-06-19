@@ -1,0 +1,35 @@
+<div class="row well">
+  <div class="ask-question-form-container">
+    <form>
+      <div class="row">
+          <div class="col-sm-3 form-group">
+            <label for="author">Name</label>
+            {{input value=author id="author" class="form-control"}}
+          </div>
+
+          <div class="col-sm-9 form-group">
+            <label for="question">Question</label>
+            {{input value=question id="question" class="form-control"}}
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="col-sm-12 form-group">
+            <label for="description">Details</label>
+            {{input value=description id="description" class="form-control"}}
+          </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button id="update" class="btn btn-warning" {{action 'update'}}>Update Question</button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+<div class="row well">
+  <button class="btn btn-danger" {{action 'delete'}}>Delete Question</button>
+</div>
