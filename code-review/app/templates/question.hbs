@@ -1,13 +1,13 @@
 <div class="row well">
   <h6>
-    <span class="italic">Posted </span> {{from-now date}}
-      by: <span class="italic">{{author}}</span>
+    <span class="italic">Posted </span> {{from-now model.date}}
+      by: <span class="italic">{{model.author}}</span>
   </h6>
   <br />
-  <span class="italic"><h2>"{{question}}?"</h2></span>
+  <span class="italic"><h2>"{{model.question}}?"</h2></span>
   <br />
   <div class="section">
-    DETAILS: {{description}}
+    DETAILS: {{model.description}}
   </div>
 </div>
 
@@ -45,7 +45,7 @@
           <th>Author</th><th>Answer</th><th>Posted</th><th></th>
         </tr>
       </thead>
-      {{#each answer in answers}}
+      {{#each answer in model.answers}}
         <tr>
           <td>
             {{answer.author}}
