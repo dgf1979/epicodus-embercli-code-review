@@ -5,7 +5,8 @@ export default Ember.Controller.extend({
     update: function() {
       var question = this.model;
       question.save();
-      this.transitionToRoute('question', this);
+      debugger;
+      this.transitionToRoute('question', this.model);
     },
     delete: function() {
       if(confirm('Are you sure?')) {
